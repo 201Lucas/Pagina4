@@ -1,0 +1,150 @@
+<mat-card class="cardWithShadow theme-card">
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Menú Principal</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="b-t-1">
+    <div class="row">
+      <!-- Menú de Servicios -->
+      <div class="col-sm-6 col-lg-4">
+        <mat-card class="b-1 shadow-none">
+          <mat-card-header>
+            <mat-card-title>Servicios</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="b-t-1">
+            <button
+              mat-flat-button
+              color="primary"
+              class="m-t-8"
+              [matMenuTriggerFor]="servicesMenu"
+            >
+              Servicios
+            </button>
+            <mat-menu #servicesMenu="matMenu" class="cardWithShadow">
+              <button mat-menu-item>Diseño Web Personalizado</button>
+              <button mat-menu-item>Optimización SEO</button>
+              <button mat-menu-item>Desarrollo de E-commerce</button>
+              <button mat-menu-item>Consultoría en Marketing Digital</button>
+              <button mat-menu-item>Mantenimiento y Soporte</button>
+            </mat-menu>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <!-- Menú con Iconos -->
+      <div class="col-sm-6 col-lg-4">
+        <mat-card class="b-1 shadow-none">
+          <mat-card-header>
+            <mat-card-title>Menú con Iconos</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="b-t-1">
+            <button
+              mat-icon-button
+              [matMenuTriggerFor]="iconsMenu"
+              aria-label="Menu con Iconos"
+            >
+              <mat-icon>
+                <i-tabler name="dots" class="icon-20"></i-tabler>
+              </mat-icon>
+            </button>
+            <mat-menu #iconsMenu="matMenu" class="cardWithShadow">
+              <button mat-menu-item>
+                <mat-icon></mat-icon>
+                <span>Configuraciones</span>
+              </button>
+              <button mat-menu-item disabled>
+                <mat-icon></mat-icon>
+                <span>Feedback</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon></mat-icon>
+                <span>Soporte</span>
+              </button>
+            </mat-menu>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <!-- Menú Anidado -->
+      <div class="col-sm-6 col-lg-4">
+        <mat-card class="b-1 shadow-none">
+          <mat-card-header>
+            <mat-card-title>Menu multiple</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="b-t-1">
+            <button
+              mat-flat-button
+              color="primary"
+              [matMenuTriggerFor]="servicesNestedMenu"
+              class="m-t-8"
+            >
+              Índice de Servicios
+            </button>
+            <mat-menu class="cardWithShadow" #servicesNestedMenu="matMenu">
+              <button mat-menu-item [matMenuTriggerFor]="webServices">Servicios Web</button>
+              <button mat-menu-item [matMenuTriggerFor]="marketingServices">Servicios de Marketing</button>
+            </mat-menu>
+
+            <mat-menu class="cardWithShadow" #webServices="matMenu">
+              <button mat-menu-item>Diseño Web</button>
+              <button mat-menu-item>Desarrollo Web</button>
+              <button mat-menu-item>Optimización SEO</button>
+            </mat-menu>
+
+            <mat-menu class="cardWithShadow" #marketingServices="matMenu">
+              <button mat-menu-item>Consultoría en Marketing</button>
+              <button mat-menu-item>Gestión de Redes Sociales</button>
+              <button mat-menu-item>Publicidad Digital</button>
+            </mat-menu>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <!-- Menús con Posiciones -->
+      <div class="col-12">
+        <mat-card class="b-1 shadow-none">
+          <mat-card-header>
+            <mat-card-title>Menú Secundario</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="b-t-1">
+            <div class="row">
+              <div class="col-sm-3">
+                <button mat-flat-button color="primary" class="w-100 m-b-4" [matMenuTriggerFor]="aboveMenu"> Inventario</button>
+                <mat-menu class="cardWithShadow" #aboveMenu="matMenu" yPosition="above">
+                  <button mat-menu-item>Servicios</button>
+                  <button mat-menu-item>Productos</button>
+                </mat-menu>
+              </div>
+              <div class="col-sm-3">
+                <button mat-flat-button color="accent" class="w-100 m-b-4" [matMenuTriggerFor]="belowMenu">
+                  Nosotros
+                </button>
+                <mat-menu class="cardWithShadow" #belowMenu="matMenu" yPosition="below">
+                  <button mat-menu-item>Contacto</button>
+                  <button mat-menu-item>Sobre Nosotros</button>
+                </mat-menu>
+              </div>
+              <div class="col-sm-3">
+                <button mat-flat-button color="warn" class="w-100 m-b-4" [matMenuTriggerFor]="beforeMenu">
+                  Opiniones
+                </button>
+                <mat-menu class="cardWithShadow" #beforeMenu="matMenu" xPosition="before">
+                  <button mat-menu-item>Testimonios</button>
+                  <button mat-menu-item>Casos de Estudio</button>
+                </mat-menu>
+              </div>
+              <div class="col-sm-3">
+                <button mat-flat-button color="primary" class="w-100 m-b-4" [matMenuTriggerFor]="afterMenu">
+                  Social
+                </button>
+                <mat-menu class="cardWithShadow" #afterMenu="matMenu" xPosition="after">
+                  <button mat-menu-item>Blog</button>
+                  <button mat-menu-item>FAQs</button>
+                </mat-menu>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

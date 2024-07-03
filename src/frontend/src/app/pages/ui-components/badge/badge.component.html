@@ -1,0 +1,66 @@
+<mat-card class="cardWithShadow theme-card">
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Insignias y Certificación</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="b-t-1">
+    <mat-card class="b-1 shadow-none">
+      <mat-card-content>
+        <p>
+          <span class="f-w-500 text-muted">Certificación de Calidad:</span>
+        </p>
+        <p>ISO 9001 (Gestión de Calidad)</p>
+        <p>ISO 27001 (Seguridad de la Información)</p>
+        <p>Certificación SSL (Sitio Seguro)</p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="b-1 shadow-none">
+      <mat-card-content>
+        <p>
+          <span class="f-w-500 text-muted">Premios y Reconocimientos:</span>
+        </p>
+        <p>Premio a la Mejor Empresa de Diseño Web 2023</p>
+        <p>Reconocimiento por Innovación en Desarrollo Web</p>
+        <p>Top 10 Agencias de Marketing Digital del Año</p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="b-1 shadow-none">
+      <mat-card-content>
+        <p>
+          <span class="f-w-500 text-muted">Tecnologías y Plataformas Utilizadas:</span>
+        </p>
+        <p>Certificado en Google Ads y Analytics</p>
+        <p>Socio de Desarrollo de Shopify</p>
+        <p>Certificación en Microsoft Azure y AWS</p>
+      </mat-card-content>
+    </mat-card>
+
+
+    <mat-card class="b-1 shadow-none">
+      <mat-card-content>
+        <p>
+          <button mat-flat-button color="primary" (click)="toggleBadgeVisibility()">
+            {{ hidden ? 'Mostrar Insignias' : 'Ocultar Insignias' }}
+          </button>
+        </p>
+        <div *ngIf="!hidden" class="insignias-container">
+          <img src="./assets/images/logos/Insignia 1.png" alt="Insignia 1" class="insignia">
+          <img src="./assets/images/logos/Insignia 2.png" alt="Insignia 2" class="insignia">
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-card-content>
+</mat-card>
+
+<style>
+  .insignias-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  .insignia {
+    width: 100px;
+    height: auto;
+  }
+</style>

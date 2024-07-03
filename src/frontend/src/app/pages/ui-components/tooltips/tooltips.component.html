@@ -1,0 +1,181 @@
+<mat-card class="cardWithShadow theme-card">
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Servicios</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="b-t-1">
+    <div class="row">
+      <div class="col-lg-4 col-sm-6">
+        <mat-card class="b-1 shadow-none">
+          <mat-card-header>
+            <mat-card-title>Diseño Web</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="b-t-1">
+            <button
+              mat-flat-button
+              color="primary"
+              matTooltip="Diseño y desarrollo de sitios web"
+            >
+              Ver Más
+            </button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <mat-card class="b-1 shadow-none">
+          <mat-card-header>
+            <mat-card-title>Optimización SEO</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="b-t-1">
+            <button
+              mat-flat-button
+              color="primary"
+              matTooltip="Mejora del posicionamiento en buscadores"
+             
+            >
+              Ver Más
+            </button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <mat-card class="b-1 shadow-none">
+          <mat-card-header>
+            <mat-card-title>Soporte Técnico</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="b-t-1">
+            <button
+              mat-flat-button
+              color="primary"
+              matTooltip="Asistencia técnica y mantenimiento"
+              [matTooltipDisabled]="disabled.value"
+              class="m-r-8"
+            >
+              Ver Más
+            </button>
+
+            <mat-checkbox
+              [formControl]="disabled"
+              class="example-disabled-checkbox"
+            >
+              Desactivar
+            </mat-checkbox>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="col-lg-6">
+        <mat-card class="b-1 shadow-none">
+          <mat-card-header>
+            <mat-card-title>Menu Secundario</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="b-t-1">
+            <button
+              mat-flat-button
+              color="primary"
+              #tooltip="matTooltip"
+              matTooltip="Información adicional"
+              matTooltipPosition="below"
+              matTooltipHideDelay="100000"
+            >
+              Inventario
+            </button>
+            <button
+              mat-flat-button
+              color="accent"
+              #tooltip="matTooltip"
+              matTooltip="Información adicional"
+              matTooltipPosition="above"
+              class="m-l-8"
+              matTooltipHideDelay="100000"
+            >
+              Nosotros
+            </button>
+            <button
+              mat-flat-button
+              color="warn"
+              #tooltip="matTooltip"
+              matTooltip="Información adicional"
+              matTooltipPosition="left"
+              class="m-l-8"
+              matTooltipHideDelay="100000"
+            >
+              Opiniones
+            </button>
+            <button
+              mat-flat-button
+              color="primary"
+              #tooltip="matTooltip"
+              matTooltip="Información adicional"
+              matTooltipPosition="right"
+              class="m-l-8"
+              matTooltipHideDelay="100000"
+            >
+              Social
+            </button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="col-lg-6">
+        <mat-card class="b-1 shadow-none">
+          <mat-card-header>
+            <mat-card-title>Usuarios y Clientes</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="b-t-1">
+            <div class="row">
+              <div class="col-sm-4">
+                <mat-form-field class="w-100" appearance="outline">
+                  <mat-label>Disponibilidad</mat-label>
+                  <input matInput type="number" [formControl]="showDelay" />
+                  <mat-hint>clientes</mat-hint>
+                </mat-form-field>
+              </div>
+              <div class="col-sm-4">
+                <mat-form-field class="w-100" appearance="outline">
+                  <mat-label>Disponibilidad</mat-label>
+                  <input matInput type="number" [formControl]="hideDelay" />
+                  <mat-hint>usuarios</mat-hint>
+                </mat-form-field>
+              </div>
+              <div class="col-sm-4">
+                <button
+                  mat-flat-button
+                  color="primary"
+                  matTooltip="Manda una señal de reporte"
+                  [matTooltipShowDelay]="showDelay.value"
+                  [matTooltipHideDelay]="hideDelay.value"
+                >
+                  Reporte
+                </button>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="col-lg-4 col-sm-6">
+        <mat-card class="b-1 shadow-none">
+          <mat-card-header>
+            <mat-card-title>Cambiar Mensaje</mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="b-t-1">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>Mensaje a cambiar</mat-label>
+              <input matInput [formControl]="message" />
+            </mat-form-field>
+
+            <button
+              mat-flat-button
+              color="primary"
+              [matTooltip]="message.value || ''"
+              aria-label="Botón que muestra un tooltip con un mensaje personalizado"
+            >
+              Cambiar
+            </button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      
+    </div>
+  </mat-card-content>
+</mat-card>
