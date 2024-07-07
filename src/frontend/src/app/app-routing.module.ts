@@ -45,6 +45,17 @@ const routes: Routes = [
       },
     ],
   },
+  {
+    path: '',
+    component: FullComponent,
+    children: [
+      {
+        path: 'greeting',
+        loadChildren: () =>
+          import('./pages/greeting/greeting.module').then((m) => m.GreetingModule),
+      },
+    ]
+  },
 ];
 
 @NgModule({

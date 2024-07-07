@@ -25,6 +25,9 @@ import { HeaderComponent } from './layouts/full/header/header.component';
 import { BrandingComponent } from './layouts/full/sidebar/branding.component';
 import { AppNavItemComponent } from './layouts/full/sidebar/nav-item/nav-item.component';
 
+//SweetAlert2
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +48,7 @@ import { AppNavItemComponent } from './layouts/full/sidebar/nav-item/nav-item.co
     MaterialModule,
     TablerIconsModule.pick(TablerIcons),
     NgScrollbarModule,
+    SweetAlert2Module.forRoot(),
   ],
   exports: [TablerIconsModule],
   bootstrap: [AppComponent],

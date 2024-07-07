@@ -28,6 +28,11 @@ export const navItems: NavItem[] = [
     route: '/ui-components/lists',
   },
   {
+    displayName: 'CRUD Cliente',
+    iconName: 'message',
+    route: '/greeting',
+  },
+  {
     displayName: 'Menu',
     iconName: 'layout-navbar-expand',
     route: '/ui-components/menu',

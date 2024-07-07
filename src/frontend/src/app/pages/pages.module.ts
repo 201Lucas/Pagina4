@@ -8,7 +8,6 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 // icons
 import { TablerIconsModule } from 'angular-tabler-icons';
 import * as TablerIcons from 'angular-tabler-icons/icons';
-
 @NgModule({
   imports: [
     CommonModule,
